@@ -120,3 +120,51 @@ Toàn bộ các đầu việc và tiến độ của dự án được quản l�
   │   ├── store/           # Quản lý trạng thái ứng dụng toàn cục (Redux Toolkit / Zustand)
   │   └── utils/           # Thư viện bổ trợ (Định dạng ngày tháng, Helper Functions, Validate Form)
   └── package.json         # Danh sách các gói thư viện phụ thuộc và Scripts khởi chạy ứng dụng
+---
+
+## 6. Software Requirements Specification (SRS)
+
+Tài liệu đặc tả yêu cầu phần mềm (Software Requirements Specification - SRS) mô tả chi tiết các yêu cầu chức năng, phi chức năng, kiến trúc hệ thống, Use Case, sơ đồ nghiệp vụ và các quy trình vận hành của hệ thống.
+
+* **Tài liệu SRS chính thức:**  
+  https://docs.google.com/document/d/1Ohi8aSZe6-BUiZyDP1EOFx879613F8aDj0wKdy9QHaw/edit?usp=sharing
+
+### 6.1. Nội dung chính trong tài liệu SRS
+* Giới thiệu tổng quan hệ thống.
+* Phân tích yêu cầu nghiệp vụ.
+* Danh sách Actor và Use Case.
+* Đặc tả chức năng theo từng phân hệ.
+* Yêu cầu phi chức năng:
+  * Performance
+  * Security
+  * Scalability
+  * Availability
+  * Maintainability
+* Thiết kế cơ sở dữ liệu (ERD).
+* Kiến trúc hệ thống.
+* Quy trình phân quyền RBAC đa vai trò.
+* Mô hình AI Recommendation & RAG Chatbot.
+* Quy trình kiểm thử và đánh giá chất lượng hệ thống.
+
+### 6.2. Công nghệ và chuẩn áp dụng trong SRS
+| Hạng mục | Công nghệ / Phương pháp |
+|---|---|
+| Development Process | Agile / Scrum |
+| Requirement Modeling | UML, Use Case Diagram, Activity Diagram |
+| API Architecture | RESTful API |
+| Authentication | JWT + SSO |
+| Database Design | SQL Server |
+| AI Recommendation | Collaborative Filtering |
+| AI Assistant | RAG + LLM API |
+| Frontend Architecture | Component-based Architecture |
+| Backend Architecture | Layered Architecture |
+
+### 6.3. Mục tiêu tài liệu
+Tài liệu SRS đóng vai trò là nền tảng chuẩn hóa toàn bộ quá trình phát triển hệ thống, giúp:
+* Đồng bộ yêu cầu giữa khách hàng và đội phát triển.
+* Hỗ trợ phân chia Sprint và quản lý tiến độ trên Jira.
+* Làm cơ sở cho thiết kế UI/UX, Database và API.
+* Hỗ trợ kiểm thử phần mềm (Testing & QA).
+* Giảm thiểu rủi ro thay đổi yêu cầu trong quá trình phát triển.
+
+---
