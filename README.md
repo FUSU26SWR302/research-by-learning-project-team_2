@@ -167,4 +167,6 @@ Tài liệu SRS đóng vai trò là nền tảng chuẩn hóa toàn bộ quá tr
 * Hỗ trợ kiểm thử phần mềm (Testing & QA).
 * Giảm thiểu rủi ro thay đổi yêu cầu trong quá trình phát triển.
 
+## 7. Tài liệu nghiên cứu
+https://www.overleaf.com/read/xrnkndmzppmv#fd3526
 ---
