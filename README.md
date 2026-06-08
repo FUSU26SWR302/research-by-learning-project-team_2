@@ -106,6 +106,14 @@ Toàn bộ các đầu việc và tiến độ của dự án được quản l�
 * **Cấu trúc thư mục mã nguồn Front-end:**
 ### Cấu trúc thư mục dự án (Project Structure)
 
+## 5. Thiết kế Giao diện & Kiến trúc Front-end
+
+* **Không gian thiết kế UI/UX (Figma):** [Bản vẽ Prototype UI/UX - Figma](https://www.figma.com/design/gKB9Izxw86T9KxhbzT1EVz/SWP391?node-id=0-1&t=d7vWbb4HlaOTdpKm-1)
+
+* **Cấu trúc thư mục mã nguồn Front-end:**
+
+### Cấu trúc thư mục dự án (Project Structure)
+
 ```text
 SWP391-1/
 ├── README.md              # SRS, mô tả nghiệp vụ, thông tin nhóm
@@ -132,13 +140,14 @@ SWP391-1/
     │   │   ├── partner/   # Portal dành cho đối tác doanh nghiệp
     │   │   └── admin/     # Portal dành cho Quản trị viên hệ thống (Admin IT)
     │   ├── layouts/       # Khung giao diện (Shell UI) riêng cho từng portal
-    │   ├── components/    # Các thành phần giao diện tái sử dụng (Button, Modal,...)
+    │   ├── components/    # Các thành phần giao diện tái sử dụng
     │   ├── hooks/         # Các Custom React hooks
-    │   ├── services/      # Các API clients kết nối với Backend
-    │   ├── utils/         # Xử lý Auth, trạng thái form, kiểm soát truy cập (Access control)
-    │   ├── constants/     # Đồng bộ hóa quy trình trạng thái (Workflow sync) với BE
-    │   └── data/          # Dữ liệu tĩnh hoặc dữ liệu giả lập (Mock/static data)
-    └── public/            # Tài nguyên tĩnh công khai (Images, Icons, Fonts,...)
+    │   ├── services/      # API clients kết nối Backend
+    │   ├── utils/         # Auth, form state, access control
+    │   ├── constants/     # Đồng bộ workflow với Backend
+    │   └── data/          # Mock/static data
+    └── public/            # Images, Icons, Fonts,...
+```
 
 ## 6. Software Requirements Specification (SRS)
 
@@ -146,7 +155,7 @@ Tài liệu đặc tả yêu cầu phần mềm (Software Requirements Specifica
 
 * **Tài liệu SRS chính thức:**  
   https://docs.google.com/document/d/1Ohi8aSZe6-BUiZyDP1EOFx879613F8aDj0wKdy9QHaw/edit?usp=sharing
-
+  
 ### 6.1. Nội dung chính trong tài liệu SRS
 * Giới thiệu tổng quan hệ thống.
 * Phân tích yêu cầu nghiệp vụ.
