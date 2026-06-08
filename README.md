@@ -104,40 +104,41 @@ Toàn bộ các đầu việc và tiến độ của dự án được quản l�
 
 * **Không gian thiết kế UI/UX (Figma):** [Bản vẽ Prototype UI/UX - Figma](https://www.figma.com/design/gKB9Izxw86T9KxhbzT1EVz/SWP391?node-id=0-1&t=d7vWbb4HlaOTdpKm-1)
 * **Cấu trúc thư mục mã nguồn Front-end:**
-  ```text
+### Cấu trúc thư mục dự án (Project Structure)
+
+```text
 SWP391-1/
-├── README.md              # SRS, mô tả nghiệp vụ, team
+├── README.md              # SRS, mô tả nghiệp vụ, thông tin nhóm
 ├── BE/                    # Backend API
-│   ├── server.js          # Entry point
+│   ├── server.js          # Entry point (Khởi chạy server)
 │   ├── src/
-│   │   ├── app.js         # Express app + CORS
-│   │   ├── config/        # DB, env
-│   │   ├── routes/        # API endpoints
-│   │   ├── controllers/   # HTTP handlers
-│   │   ├── services/      # Business logic
-│   │   ├── models/        # MongoDB schemas
-│   │   ├── middleware/    # Auth, error, maintenance
-│   │   ├── constants/     # Workflow, moderation, categories
-│   │   └── utils/         # Helpers
-│   └── seed-*.js          # Dữ liệu demo
+│   │   ├── app.js         # Cấu hình Express app, CORS, Middleware tổng
+│   │   ├── config/        # Kết nối Cơ sở dữ liệu (Database), biến môi trường (.env)
+│   │   ├── routes/        # Định tuyến API endpoints
+│   │   ├── controllers/   # Xử lý các request/response HTTP (HTTP handlers)
+│   │   ├── services/      # Xử lý logic nghiệp vụ chính (Business logic)
+│   │   ├── models/        # Khai báo các MongoDB schemas
+│   │   ├── middleware/    # Xác thực (Auth), bắt lỗi (Error), bảo trì (Maintenance)
+│   │   ├── constants/     # Quản lý trạng thái workflow, kiểm duyệt, danh mục
+│   │   └── utils/         # Hàm bổ trợ, tiện ích (Helpers)
+│   └── seed-*.js          # Tập lệnh khởi tạo dữ liệu mẫu (Demo data)
 │
-└── FE/                    # Frontend SPA
+└── FE/                    # Frontend Single Page Application (React)
     ├── src/
-    │   ├── App.jsx        # Routing + RBAC guards
-    │   ├── pages/         # Màn hình theo role
-    │   │   ├── ctsv/      # Portal CTSV
-    │   │   ├── icpdp/     # Portal IC-PDP
-    │   │   ├── partner/   # Portal đối tác
-    │   │   └── admin/     # Portal Admin IT
-    │   ├── layouts/       # Shell UI từng portal
-    │   ├── components/    # Component tái sử dụng
-    │   ├── hooks/         # Custom React hooks
-    │   ├── services/      # API clients
-    │   ├── utils/         # Auth, form state, access control
-    │   ├── constants/     # Workflow sync với BE
-    │   └── data/          # Mock/static data
-    └── public/            # Static assets
----
+    │   ├── App.jsx        # Quản lý Routing + Bộ lọc phân quyền (RBAC guards)
+    │   ├── pages/         # Các màn hình chức năng phân chia theo vai trò (Role)
+    │   │   ├── ctsv/      # Portal dành cho cán bộ CTSV
+    │   │   ├── icpdp/     # Portal dành cho cán bộ IC-PDP
+    │   │   ├── partner/   # Portal dành cho đối tác doanh nghiệp
+    │   │   └── admin/     # Portal dành cho Quản trị viên hệ thống (Admin IT)
+    │   ├── layouts/       # Khung giao diện (Shell UI) riêng cho từng portal
+    │   ├── components/    # Các thành phần giao diện tái sử dụng (Button, Modal,...)
+    │   ├── hooks/         # Các Custom React hooks
+    │   ├── services/      # Các API clients kết nối với Backend
+    │   ├── utils/         # Xử lý Auth, trạng thái form, kiểm soát truy cập (Access control)
+    │   ├── constants/     # Đồng bộ hóa quy trình trạng thái (Workflow sync) với BE
+    │   └── data/          # Dữ liệu tĩnh hoặc dữ liệu giả lập (Mock/static data)
+    └── public/            # Tài nguyên tĩnh công khai (Images, Icons, Fonts,...)
 
 ## 6. Software Requirements Specification (SRS)
 
@@ -189,4 +190,4 @@ https://www.overleaf.com/read/xrnkndmzppmv#fd3526
 
 ## 8. Tài liệu nghiên cứu dự án F-Event của nhóm 
 https://www.overleaf.com/read/drwpcnqvvnyk#bb3ac8
----
+
