@@ -105,21 +105,38 @@ Toàn bộ các đầu việc và tiến độ của dự án được quản l�
 * **Không gian thiết kế UI/UX (Figma):** [Bản vẽ Prototype UI/UX - Figma](https://www.figma.com/design/gKB9Izxw86T9KxhbzT1EVz/SWP391?node-id=0-1&t=d7vWbb4HlaOTdpKm-1)
 * **Cấu trúc thư mục mã nguồn Front-end:**
   ```text
-  frontend/
-  ├── public/              # Tài nguyên tĩnh (Images, Logo, Icons, Favicon)
-  ├── src/
-  │   ├── components/      # Các UI component độc lập dùng chung (Button, Modal, Table, Input...)
-  │   ├── views/           # Các màn hình chức năng chính, phân vùng quản lý chi tiết theo Role
-  │   │   ├── Guest/
-  │   │   ├── Student/
-  │   │   ├── ClubOrganizer/
-  │   │   ├── Partner/
-  │   │   ├── Admin/
-  │   │   └── University/  # Giao diện dành chung cho ICPDP và CTSV
-  │   ├── services/        # Cấu hình Axios, Services gọi API Endpoint và tích hợp cổng dịch vụ AI
-  │   ├── store/           # Quản lý trạng thái ứng dụng toàn cục (Redux Toolkit / Zustand)
-  │   └── utils/           # Thư viện bổ trợ (Định dạng ngày tháng, Helper Functions, Validate Form)
-  └── package.json         # Danh sách các gói thư viện phụ thuộc và Scripts khởi chạy ứng dụng
+SWP391-1/
+├── README.md              # SRS, mô tả nghiệp vụ, team
+├── BE/                    # Backend API
+│   ├── server.js          # Entry point
+│   ├── src/
+│   │   ├── app.js         # Express app + CORS
+│   │   ├── config/        # DB, env
+│   │   ├── routes/        # API endpoints
+│   │   ├── controllers/   # HTTP handlers
+│   │   ├── services/      # Business logic
+│   │   ├── models/        # MongoDB schemas
+│   │   ├── middleware/    # Auth, error, maintenance
+│   │   ├── constants/     # Workflow, moderation, categories
+│   │   └── utils/         # Helpers
+│   └── seed-*.js          # Dữ liệu demo
+│
+└── FE/                    # Frontend SPA
+    ├── src/
+    │   ├── App.jsx        # Routing + RBAC guards
+    │   ├── pages/         # Màn hình theo role
+    │   │   ├── ctsv/      # Portal CTSV
+    │   │   ├── icpdp/     # Portal IC-PDP
+    │   │   ├── partner/   # Portal đối tác
+    │   │   └── admin/     # Portal Admin IT
+    │   ├── layouts/       # Shell UI từng portal
+    │   ├── components/    # Component tái sử dụng
+    │   ├── hooks/         # Custom React hooks
+    │   ├── services/      # API clients
+    │   ├── utils/         # Auth, form state, access control
+    │   ├── constants/     # Workflow sync với BE
+    │   └── data/          # Mock/static data
+    └── public/            # Static assets
 ---
 
 ## 6. Software Requirements Specification (SRS)
@@ -167,6 +184,9 @@ Tài liệu SRS đóng vai trò là nền tảng chuẩn hóa toàn bộ quá tr
 * Hỗ trợ kiểm thử phần mềm (Testing & QA).
 * Giảm thiểu rủi ro thay đổi yêu cầu trong quá trình phát triển.
 
-## 7. Tài liệu nghiên cứu
+## 7. Tài liệu nghiên cứu tham khảo 
 https://www.overleaf.com/read/xrnkndmzppmv#fd3526
+
+## 8. Tài liệu nghiên cứu dự án F-Event của nhóm 
+https://www.overleaf.com/read/drwpcnqvvnyk#bb3ac8
 ---
